@@ -1,4 +1,25 @@
-.image-container {
+.image-outer-container {
   border: 2px solid black;
   display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  background-color: grey;
+}
+
+.image-container {
+  align-items: center;
+  margin: 40px;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.cats-image {
+  width: 200px;
+  height: 300px;
 }
