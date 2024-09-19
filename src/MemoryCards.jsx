@@ -1,5 +1,8 @@
 import MemoryCard from "./MemoryCard";
 import ScoreBoard from "./ScoreBoard";
+import fetchImages from "./api.js";
+
+fetchImages();
 
 function MemoryCards() {
   return (
