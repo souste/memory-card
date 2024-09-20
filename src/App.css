@@ -23,3 +23,18 @@
   width: 200px;
   height: 300px;
 }
+
+.title-scoreboard-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scoreboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 50px;
+  color: red;
+  font-weight: bold;
+  width: 200px;
+}
