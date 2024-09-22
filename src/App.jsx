@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import MemoryCards from "./MemoryCards";
 import "./App.css";
 
