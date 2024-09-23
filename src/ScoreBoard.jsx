@@ -1,7 +1,7 @@
 function ScoreBoard({ score, bestScore }) {
   return (
     <div className="title-scoreboard-container">
-      <div>
+      <div className="title-instructions-container">
         <h2>Memory Card Game</h2>
         <p>Get points by clicking on a cat. You lose if you click on the same cat twice!</p>
       </div>

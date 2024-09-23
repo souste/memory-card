@@ -5,12 +5,14 @@
   padding: 0;
   margin: 0;
   justify-content: center;
-  background-color: lightgray;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }
 
 .image-container {
   align-items: center;
   margin: 40px;
+  border: 10px solid orange;
+  box-shadow: 10px 5px 5px black;
 }
 
 .image-container:hover {
@@ -21,12 +23,19 @@
 .cats-image {
   width: 200px;
   height: 300px;
+  border-radius: 10px;
 }
 
 .title-scoreboard-container {
   display: flex;
   justify-content: space-between;
-  background-color: lightgray;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  text-shadow: 2px 2px 2px black;
+}
+
+.title-instructions-container {
+  font-size: 20px;
+  padding-left: 20px;
 }
 
 .scoreboard-container {
@@ -36,5 +45,7 @@
   padding-right: 50px;
   color: red;
   font-weight: bold;
+  font-size: 20px;
   width: 200px;
+  padding-top: 0;
 }
