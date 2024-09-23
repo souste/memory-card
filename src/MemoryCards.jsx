@@ -6,7 +6,7 @@ import "./App.css";
 function MemoryCards() {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [counter, setCounter] = useState(0);
+  const [score, setScore] = useState(0);
   const [catArr, setCatArr] = useState([]);
 
   useEffect(() => {
@@ -14,16 +14,21 @@ function MemoryCards() {
       setImages(images);
       setLoading(false);
     });
-  }, [counter]);
+  }, [score]);
+
+  const hasDuplicate = checkDuplicates(catArr);
 
   function handleClick(event) {
-    setCounter(counter + 1);
+    setScore(score + 1);
     setCatArr([...catArr, event.target.id]);
-    const hasDuplicate = checkDuplicates(catArr);
-    if (hasDuplicate) {
-      setCounter(0);
-    }
   }
+
+  useEffect(() => {
+    if (hasDuplicate) {
+      setScore(0);
+    }
+  }, [hasDuplicate]);
+
   console.log(catArr);
 
   function checkDuplicates(arr) {
@@ -42,7 +47,7 @@ function MemoryCards() {
     <p>...page is loading</p>
   ) : (
     <div>
-      <ScoreBoard counter={counter} />
+      <ScoreBoard score={score} />
 
       <ul className="image-outer-container">
         {images.map((image) => {
