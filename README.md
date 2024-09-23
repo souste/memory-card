@@ -1,8 +1,10 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Cat Memory Card Game
 
-Currently, two official plugins are available:
+https://souste-cat-memory.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Basic Memory Card Game
+- Get points for clicking on a card
+- Game resets to 0 if a card is selected twice
+- Game keeps track on the Best (Highest) Score
