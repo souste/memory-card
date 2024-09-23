@@ -7,6 +7,7 @@ function MemoryCards() {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
   const [catArr, setCatArr] = useState([]);
 
   useEffect(() => {
@@ -24,10 +25,14 @@ function MemoryCards() {
   }
 
   useEffect(() => {
+    if (hasDuplicate && score > bestScore) {
+      setBestScore(score);
+    }
     if (hasDuplicate) {
       setScore(0);
+      setCatArr([]);
     }
-  }, [hasDuplicate]);
+  }, [hasDuplicate, score, bestScore]);
 
   console.log(catArr);
 
@@ -47,7 +52,7 @@ function MemoryCards() {
     <p>...page is loading</p>
   ) : (
     <div>
-      <ScoreBoard score={score} />
+      <ScoreBoard score={score} bestScore={bestScore} />
 
       <ul className="image-outer-container">
         {images.map((image) => {
