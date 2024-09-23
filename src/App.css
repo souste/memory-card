@@ -49,3 +49,30 @@
   width: 200px;
   padding-top: 0;
 }
+
+@media (max-width: 768px) {
+  .image-outer-container {
+    padding: 20px;
+  }
+
+  .image-container {
+    margin: 20px;
+  }
+
+  .cats-image {
+    width: 150px;
+    height: 225px;
+  }
+
+  .title-scoreboard-container {
+    flex-direction: column;
+  }
+
+  .title-instructions-container {
+    text-align: center;
+  }
+
+  .scoreboard-container {
+    padding-right: 20px;
+  }
+}
